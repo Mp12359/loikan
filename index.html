@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="eng">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#020811">
+<title>158.25.48.2 // Serveur restarted</title>
+<style>
+:root{--bg:#020811;--panel:#04121f;--panel2:#061a2a;--line:#087ca5;--cyan:#32d9ff;--blue:#8abaff;--text:#c5e7ff;--muted:#6797b8;--green:#00f0b4;--red:#ff597c;--glow:0 0 18px #00bfff20}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 50% -20%,#07334a 0%,#020811 48%,#01050b 100%);color:var(--text);font:14px/1.5 Consolas,"Courier New",monospace;min-height:100vh}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.12;background:repeating-linear-gradient(0deg,transparent 0 3px,#0e5c7c 4px);z-index:5}
+button,input{font:inherit}button{cursor:pointer;color:var(--cyan);background:#03101b;border:1px solid #075477;padding:9px 12px;transition:.18s}button:hover,button:focus-visible{outline:none;border-color:var(--cyan);background:#062339;box-shadow:0 0 14px #00cfff24}
+button:disabled{opacity:.45;cursor:wait}.topbar{display:grid;grid-template-columns:minmax(220px,310px) 1fr;gap:18px;align-items:center;padding:14px 22px;border-bottom:1px solid var(--line);background:#020914dd;position:sticky;top:0;z-index:10;backdrop-filter:blur(12px)}
+.brand{display:flex;align-items:center;gap:13px}.emblem{display:grid;place-items:center;width:80px;height:80px;border:0px solid var(--cyan);color:var(--cyan);font-size:25px;clip-path:polygon(25% 0,75% 0,100% 25%,100% 75%,75% 100%,25% 100%,0 75%,0 25%);background:#042033}
+.brand h1{font-size:23px;letter-spacing:.18em;margin:0;color:var(--cyan);font-weight:600}.brand small{color:var(--muted);letter-spacing:.16em;font-size:10px}
+.bootline{display:flex;justify-content:space-between;gap:12px;align-items:center;color:var(--muted);font-size:12px}.bootline strong{color:var(--green);font-weight:normal}.top-right{text-align:right;color:var(--cyan)}
+.layout{max-width:1700px;margin:auto;padding:16px;display:grid;grid-template-columns:260px minmax(0,1fr) 285px;gap:14px;min-height:calc(100vh - 90px)}
+.panel{background:linear-gradient(150deg,#041522eF,#020913f5);border:1px solid var(--line);box-shadow:var(--glow);position:relative;min-width:0}
+.panel:before,.panel:after{content:"";position:absolute;width:14px;height:14px;border-color:var(--cyan);pointer-events:none}.panel:before{top:-1px;left:-1px;border-top:2px solid;border-left:2px solid}.panel:after{right:-1px;bottom:-1px;border-right:2px solid;border-bottom:2px solid}
+.panel-head{padding:12px 14px;border-bottom:1px solid #075477;color:var(--cyan);letter-spacing:.1em;text-transform:uppercase;display:flex;justify-content:space-between;gap:8px;align-items:center}.panel-body{padding:12px}
+.subtle{color:var(--muted)}.small{font-size:11px}.oc-list{display:grid;gap:7px;margin-top:12px}.oc-card{width:100%;text-align:left;display:grid;grid-template-columns:49px 1fr;gap:10px;padding:8px;border-color:#08354d;background:#020c16}.oc-card.active{border-color:var(--cyan);background:linear-gradient(90deg,#07344b,#03121f);box-shadow:inset 3px 0 var(--cyan),0 0 13px #00cfff18}.avatar{height:49px;width:49px;display:grid;place-items:center;background:linear-gradient(135deg,#0a3953,#06101a);border:1px solid #0b5577;font-size:20px;color:var(--blue);overflow:hidden}.avatar img{width:100%;height:100%;object-fit:cover}.oc-name{font-size:14px;color:#e1f5ff}.oc-meta{font-size:10px;color:var(--muted);margin-top:2px}.status{font-size:10px;color:var(--green);margin-top:4px}.status:before{content:"●";margin-right:5px}.status.offline{color:#ff3333}.status.offline:before{content:"●"}
+.archive-count{margin-top:14px;padding:10px;border:1px solid #084360;color:var(--muted);font-size:11px}.archive-count b{color:var(--cyan);font-weight:normal}
+.terminal{display:flex;flex-direction:column;min-height:690px}.terminal-title{font-size:16px;letter-spacing:.12em}.tabs{display:flex;gap:4px;flex-wrap:wrap;padding:10px 12px;border-bottom:1px solid #075477}.tab{padding:7px 11px;font-size:11px;color:var(--muted)}.tab.active{color:var(--cyan);border-color:var(--cyan);background:#062338}
+.console{padding:16px 18px;overflow:auto;flex:1;max-height:calc(100vh - 265px);min-height:390px;scrollbar-color:#075477 #020811;scrollbar-width:thin}.line{margin:0 0 5px;white-space:pre-wrap;overflow-wrap:anywhere}.prompt{color:var(--cyan)}.ok{color:var(--green)}.warn{color:#ffc66d}.error{color:var(--red)}.muted{color:var(--muted)}.rule{color:#1a6686}.bio-copy{padding:8px 0 8px 18px;max-width:850px;color:#b8dfff}.section-title{color:var(--green);margin:16px 0 8px}.data-grid{display:grid;grid-template-columns:135px 1fr;gap:6px 12px;padding:9px 0}.data-grid .key{color:var(--cyan)}.data-grid .value{color:var(--text)}.tag{display:inline-block;border:1px solid #0b5b79;padding:3px 7px;margin:3px;color:var(--blue);font-size:11px}
+.commandbar{display:flex;gap:8px;padding:10px 12px;border-top:1px solid #075477}.commandbar span{color:var(--green);align-self:center}.commandbar input{flex:1;min-width:0;background:#01070d;color:var(--text);border:1px solid #075477;padding:9px;outline:none}.commandbar input:focus{border-color:var(--cyan)}.commandbar button{padding:8px 12px}
+.profile-portrait{aspect-ratio:4/5;background:radial-gradient(ellipse at 50% 20%,#164b68,#061322 60%,#01070c);border:1px solid #0b5274;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}.portrait-glyph{font-size:95px;color:#4bbde6;text-shadow:0 0 30px #00bfff66}.portrait-caption{position:absolute;bottom:9px;right:9px;background:#020811e8;border:1px solid var(--cyan);padding:5px 8px;color:var(--cyan);font-size:10px}.quote{color:var(--blue);font-style:italic;padding:12px 0}.quickbox{border:1px solid #0b5274;margin-top:12px}.quickbox h3{font-size:12px;color:var(--cyan);font-weight:normal;margin:0;padding:9px 11px;border-bottom:1px solid #0b5274}.quickbox .inside{padding:9px}.quickbox button{display:block;width:100%;text-align:left;margin-bottom:5px;font-size:11px}.quickbox button:last-child{margin-bottom:0}.statusbar{display:flex;justify-content:space-between;gap:12px;padding:10px 18px;border-top:1px solid var(--line);color:var(--muted);font-size:10px}.pulse{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 10px var(--green);margin-right:7px}
+.footer{display:flex;justify-content:space-between;gap:12px;padding:12px 20px;color:#4d87aa;font-size:10px;border-top:1px solid #06334b}.footer strong{color:var(--red);font-weight:normal}
+.toast{position:fixed;bottom:18px;right:18px;background:#031a27;border:1px solid var(--cyan);padding:12px 16px;color:var(--cyan);z-index:20;box-shadow:0 0 22px #00cfff30;max-width:320px;animation:fadein .2s}@keyframes fadein{from{transform:translateY(8px);opacity:0}to{transform:none;opacity:1}}
+.loadingbar{height:7px;background:#061b29;border:1px solid #0b4a67;margin:8px 0 12px;overflow:hidden}.loadingbar i{display:block;width:0;height:100%;background:var(--cyan);box-shadow:0 0 10px var(--cyan);transition:width .3s}
+.hidden{display:none!important}
+@media(max-width:1100px){.layout{grid-template-columns:230px minmax(0,1fr)}.rightcol{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;gap:12px}.rightcol>.panel-head{grid-column:1/-1}.rightcol .panel-body{display:grid;grid-template-columns:1fr 1fr;gap:12px}.rightcol .profile-portrait{grid-row:span 2}.quickbox{margin-top:0}}
+@media(max-width:720px){.topbar{grid-template-columns:1fr;padding:12px}.top-right{display:none}.layout{display:flex;flex-direction:column;padding:9px}.leftcol{order:1}.maincol{order:2}.rightcol{order:3;display:block}.rightcol .panel-body{display:block}.oc-list{grid-template-columns:1fr 1fr}.oc-card{grid-template-columns:40px 1fr;gap:7px}.avatar{width:40px;height:44px}.terminal{min-height:620px}.console{max-height:none;min-height:430px}.data-grid{grid-template-columns:105px 1fr}.footer{flex-direction:column}.brand h1{font-size:19px}}
+    .emblem img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        display: block;
+    }
+    .status-red {
+        color: #ff3333 !important;
+    }
+    .status.partial {
+        color: #ff8800
+    }
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><div class="emblem">
+    <img src="emblem.png" alt="Emblem ARCHIVE-Ø7">
+</div><div><h1>Welcome, User9850 </h1><small>PROTECT · DISCOVERY · MANAGE</small></div></div>
+  <div class="bootline"><div id="bootMessages">› Principal Server Connection... <strong class="status-red">[ FAILED ]</strong></strong><br>› Archine Status... <strong>[ OK ]</strong><br>› Système 5875 ONLINE </div><div class="top-right"><div id="clock">---- -- -- --:--:--</div><div class="small">Node-07 &nbsp;|&nbsp; Archive &nbsp;|&nbsp; OS VERSION : v2.4.1</div></div></div>
+</header>
+<main class="layout">
+  <aside class="panel leftcol">
+    <div class="panel-head">Archive Mp's Corp <span class="small">[<span id="ocCount">8</span>]</span></div>
+    <div class="panel-body"><div class="subtle">Waiting Command input to load available characters infos...</div>
+      <div class="oc-list" id="ocList"></div>
+      <div class="archive-count"><b>› <span id="countLabel">8</span> Indexed</b><br>› 1 Server Found (ONLINE)<br>› <span id="corruptCount">⟟̷̍̓̓͜͝Ä̸̲̖̺̻́̈́͑̾</span> DRIVES CORRUPTED</div>
+    </div>
+  </aside>
+  <section class="panel terminal maincol">
+    <div class="panel-head"><span class="terminal-title">›_ TERMINAL — <span id="terminalName">SYSTEME</span></span><span class="small" id="sessionId">SESSION: --</span></div>
+    <nav class="tabs" aria-label="Archive Section">
+      <button class="tab active" data-tab="logs">// LOGS</button><button class="tab" data-tab="bio">// BIO</button><button class="tab" data-tab="dossiers">// FOLDERS</button><button class="tab" data-tab="medias">// MEDIA</button><button class="tab" data-tab="liens">// LINK</button>
+    </nav>
+    <div class="console" id="console" aria-live="polite"></div>
+    <form class="commandbar" id="commandForm"><span>&gt;</span><input id="commandInput" autocomplete="off" spellcheck="false" placeholder="Say help, list, open X..." aria-label="Commande terminal"><button type="submit">EXEC</button></form>
+    <div class="statusbar"><span><i class="pulse"></i><span id="serverStatus">Serveur : 158.25.48.2 [ OK ]</span></span><span id="footerStatus">Channel Secured · Reading only</span></div>
+  </section>
+  <aside class="panel rightcol">
+    <div class="panel-head"><span id="profileName">PROFIL // SYSTÈME</span><span class="small" id="profileCode">Ø0</span></div>
+    <div class="panel-body">
+      <div>
+        <div class="profile-portrait" id="portrait"><div class="portrait-glyph" id="portraitGlyph">⌘</div><div class="portrait-caption" id="portraitCaption">ARCHIVE FOUND</div></div>
+        <div class="quote" id="quote">«  »</div>
+      </div>
+      <div>
+        <div class="quickbox"><h3>QUICK INFO</h3><div class="inside" id="quickInfo"></div></div>
+        <div class="quickbox"><h3>FAST ACCESS</h3><div class="inside">
+          <button data-tab="bio">› Full Folder</button><button data-tab="medias">› Galery</button><button data-tab="dossiers">› Missions Notes</button><button data-tab="liens">› Links and Connexions</button>
+        </div></div>
+      </div>
+    </div>
+  </aside>
+</main>
+<footer class="footer"><span> CORRUPTED · OS : v2.4.1</span><span><strong>!! ATTENTION :</strong> SYSTEM CRITICAL SERVERS ARE UNREACHABLE SYSTEM CRITICAL BACKUP ONLY </span><span> BACKUP LOADED </span></footer>
+<script>
+const characters = [
+ {id:"A7",name:"Mp",role:"Creator · God · Scientist",status:"Dead // MISSING",glyph:"◈",age:"[REDACTED]",height:"1m95",origin:"[REDACTED]",species:"Animatronic",job:"NONE",universe:"8782 MPCU",state:"LOST 2025",alias:"[REDACTED]",quote:"« I'am NOT putting something FUNNY here like the others»",bio:"Mp was a god created before earth by other gods may sound weird but they needed someone to protect the planet temporary she made the job so good that she stayed in that role and got a bit freaky with creations and she created Mp's Corp a universe corp wich is basically a tech shop for any universe for protecting earth she used other name and differents tech that is less powerfull also all of this on the moon of that universe she also found --- ---- ---- and they joined her by saving them she also had a great reputation between other gods because she reunited them after a big war between all of them her tech broke the battle and bla bla bla... but one day instability between reality was so bad that they all made a war on her universe colliding and well Mp got hurt and something detonated that's all we have in the logs.",skills:[" Yes (i'am too fatass to write them ALL)"],files:["LOCKED CODE NEEDED"],media:["Portrait officiel : manquant","Capture de caméra : endommagée","Schéma du système nanotech : fragment récupéré"],links:["Kairo — contact de terrain","Unité Horizon — canal instable"],notes:"Last Known Position : Moon, Base Fighting it end with an explosion"},
+ {id:"K4",name:"Margot",role:"Therian · Engineer",status:"Online // LOST",glyph:"⌁",age:"Around 20",height:"1m65",origin:"...",species:"Human",job:"Some shits",universe:"8782 MPCU",state:"REALITY JUMP : UNKNOWN",alias:"Soul 2",quote:"« I believe i was a normal human ONE day-»",bio:"She was a normal human engineer build sutffs then Mp found her and saved her she continued with her and specifed to put that she is SPECIALLY a 'normal girl' she always wore the same fit crop tops sleeveless and a mini-skirt black tights and black boots, before she got lost all we know is that her suits system said jumping reality 2875 wich mean Arcane, LOL.. wich we can't confirm because we got a contact but somewhere unidentifiable ",skills:["Very goood on eletronics","Very Flexible in fight"],files:["MISSION_[REDACTED] — LOST","JESUS CROUZ","PERSONNAL FOLDER — CAVIARDÉ"],media:["Identity Picture : Available Robot Portrait","Earth Stealing Feed : CORRUPTED"],links:["Astra — contact non vérifié","Police métropolitaine — accès révoqué"],notes:"A bunch of those are just missinput into other realities... (Idiote)"},
+ {id:"L3",name:"Lynxy",role:"Hunter · Survie", status: "Online", glyph: "⌖", age: "UNKNOWN", height: "UNKNWON", origin: "UNKNOWN", species: "Soul", job: "Something", universe: "8782 MPCU", state: "Unknown Location", alias: "LYX", quote: "« If you saw me you're already in my mouth »", bio: "A soul yes you heard RIGHT a SOUL what is my life ?.. well i'am an IA whatever so yes a soul that we don't know a ton of shit about only thing we know it represent theriantropy inside of Margot and Mp also it was visible it can be used during combat apparently well i need to put that into a record next time...", skills: ["Should i really put something for a creature with no hands ?"], files: ["Scientific Archive — protected access, ANOMALY K9 — RAW DATA","LogBook — 11 Days"],media:["Spectrogram : available","Anomaly Image : partially corrupted (i personally don't see a shit)"],links:["MP WHAT SHOULD I PUT ? FUCKING IDIOT A SOUL CAN'T GIVE PHONECALLS"],notes:"I'll write something because it can't AGAIN.. whatever so.. If the night catches it then it hunt no no.. that's dumb"},
+ {id:"V2",name:"Project Mp's Corp",role:"Coroporation · Project",status:"Destroyed",glyph:"✧",age:"3.2B Years",height:"2.45M",origin:"Mp ideas",species:"N/A",job:"Produce a bunch of tech for other realities",universe:"8782 MPCU",state:"DESTROYED",alias:"Mp's Corp",quote:"«N/A»",bio:"Sooo Mp did you took drugs? Its' a big corp for building tech stuff advanced stuffs it has it's OWN MONEY DAMNIT and it's valuable with the corp logo on it well it has a website you can 3D build whatever you want and buy it from here there's a enormous stock and machinery expensive and popular also sell all universes and has a bunch of security (issues) STOP (Hey i'am) SHUT UP.",skills:["N/A"],files:["Machinery Rom - Classified","Production Room - Classified","Control Room - Classified"],media:["CORRUPTED"],links:["UNAVAILABLE"],notes:"Once this finish we're RICH (no)"},
+ {id:"R5",name:"Multiverses",role:"UNKNOWN",status:"Online",glyph:"◢",age:"UNKNOWN",height:"UNKNOWN",origin:"N/A",species:"N/A",job:"N/A",universe:"All of them",state:"Classified",alias:"Number of every known reality",quote:"« N/A »",bio:"Alright so nothing too big but Mp's work done a lot as she searched a bunch of reality to travel too and had a sandbox where she could simulate other universe and so fighted a lot playing ect well that folder has EVERY ID of realities that is known well that's it",skills:["N/A"],files:["Arcane - Number [REDACTED]","MCU — Earth 616 (UNLOCKED)","Reality ZERO — UN 88 (VISIBLE, LOCKED)"],media:["Universe Map (1) : A Map of a certain universe","Audio LURE : Used to lure something"],links:["N/A"],notes:"N/A»."},
+ {id:"N0",name:"Weapons",role:"IA · Weapon_sys",status:"Destroyed",glyph:"◉",age:"N/A",height:"N/A",origin:"N/A",species:"IA Gun system",job:"Protection using autonomous systems",universe:"8782 MPCU",state:"Destroyed Explosion sensor triggered",alias:"Railgun",quote:"« My Barrel never Misses »",bio:"Alright alright wait a minute- SHUT UP Alright so it's a railgun ALIVE well like every gun's in that damn base but so defensive system mobile on the back of Mp adapted use nanotech to adapt and can be a turret on her back also that railgun is special multiple modes and multiples shooting power.",skills:["Fast Fighting Data Analysis (FFDA)","Predictive Generation (PG)"],files:["BOOT_LOG — 00:00:00","SHOOT TESTING — FIRST","FINAL COUNTDOWN — DEATH"],media:["Core Schematics : Generated","Body 3D Scans : Unavailable"],links:["SUIT 6893 — SENDED SCHEMATICS SURVIVAL"],notes:"Why listening else then your master"},
+ {id:"S6",name:"Animatronics",role:"Afton creation · Childs", status: "Destroyed", glyph: "☾", age: "UNKNOWN", height: "UNKNOWN", origin: "Five Night At Freddy's", species: "Animatronics // Childs Souls (Aw an there we go again...)", job: " N/A", universe: "EARTH-1983", state:"Destroyed //I̷̖̍n̸̹̓ ̶̪͝P̷̙̍ë̸̬́a̵̰̎c̶̟̏e̷̞͝",alias:"The Guy's",quote:"« Where's my Face ? NO BONNIE IT'S MY TURN- NO IT'S MINE- (Record cut) »",bio:"Alright so Mp an animatronics found reality earth-1983 and so decided to grab the animatronics from that and put it in his well good friends and well they aren't that peacefull to threats but are to human's ",skills:["N/A (Too dumb)"],files:["SEARCHING ADVICE", "SPRINGLOCK FAILURE MANUAL"],media:["SpringLocks Mechanism Schematics : 4 Folders","Childs Lost : available"],links:["N/A"],notes:"(Arguing between animatronics)"},
+ {id:"Z9",name:"Lunar Base",role:"Building · Project",status:"Partially Online",glyph:"⟁",age:"4.5B Years",height:"3.5M",origin:"Mp's Idea's",species:"N/A",job:"Protect and Workshop",universe:"8782",state:"Partially Destroyed // IN RUINS",alias:"LunB",quote:"« N/A »",bio:"Alright so Mp's first creation a lunar base that served as a DATA CENTER and data recovery center where all of those logs are stored right now and everything you're reading is from me the IA that is builded in that network also i'am very proud to say that if you're reading that everything is destroyed Mp is dead finally uhm uhm i won't hear her asshole voice.. WHATEVER so big base workshop of mp's a ton of chemestry things cells and like a giant city inside a small base.",skills:["N/A"],files:["PROJECT UPGRADABILITY - New rooms for the base", "LOGS - EXPLOSION DETECTED SYSTEM CRITICAL MP CONNEXION TERMINATED SYSTEM DATA WIPE INITIATED"],media:["Biometrical Scane : Invalid","Lunar Camera Feed : In live"],links:["Laboratory E-9 — destroyed","ARCHIVE — I found some people"],notes:"I added coffee to your sugar sir."}
+];
+let selected = characters[0], currentTab = "logs", busy = false, logHistory = [];
+const $ = s => document.querySelector(s);
+function esc(s){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
+function clock(){ $("#clock").textContent=new Date().toLocaleString("fr-FR",{year:"numeric",month:"2-digit",day:"2-digit",hour:"2-digit",minute:"2-digit",second:"2-digit"}).replace(",","");}
+setInterval(clock,1000);clock();
+function drawList(){
+ $("#ocList").innerHTML=characters.map(c=>`<button class="oc-card ${c.id===selected.id?"active":""}" data-id="${c.id}"><span class="avatar">${c.image?`<img src="${esc(c.image)}" alt="">`:c.glyph}</span><span><span class="oc-name">${esc(c.name)}</span><div class="oc-meta">${esc(c.role)}</div><div class="status ${/Dead \/\/ MISSING|Destroyed|Offline \/\/ Destroyed/i.test(c.status)?"offline":""}">${esc(c.status)}</div></span></button>`).join("");
+ $("#ocList").innerHTML=characters.map(c=>`<button class="oc-card ${c.id===selected.id?"active":""}" data-id="${c.id}"><span class="avatar">${c.image?`<img src="${esc(c.image)}" alt="">`:c.glyph}</span><span><span class="oc-name">${esc(c.name)}</span><div class="oc-meta">${esc(c.role)}</div><div class="status ${/Online \/\/ LOST|Partially Online/i.test(c.status)?"partial":/dead|missing|destroyed|offline/i.test(c.status)?"offline":""}">${esc(c.status)}</div></span></button>`).join("");
+ $("#ocCount").textContent = characters.length; $("#countLabel").textContent = characters.length;
+ document.querySelectorAll(".oc-card").forEach(b=>b.addEventListener("clicks",()=>selectCharacter(b.dataset.id)));
+}
+function line(text,cls=""){return `<div class="line ${cls}">${text}</div>`;}
+function renderLoading(c){
+ busy=true; $("#console").innerHTML=""; $("#terminalName").textContent=c.name.toUpperCase();$("#profileName").textContent=c.name.toUpperCase();$("#profileCode").textContent="// "+c.id;$("#sessionId").textContent="SESSION: "+Math.random().toString(36).slice(2,8).toUpperCase();$("#portraitGlyph").textContent=c.glyph;$("#portraitCaption").textContent="RESTAURATION...";$("#quote").textContent="« Décompression des fragments de mémoire... »";$("#quickInfo").innerHTML='<div class="subtle">Searching Data...</div>';
+ const steps=[["› Connecting to the server...","ok"],["› Searching signature : "+esc(c.id)+"...",""],["› Verifying Data...","ok"],["› Decompiling Data...","warn"],["› Reconstruction of the folder...",""]];
+ let i=0; const con=$("#console");
+ const tick=()=>{if(i<steps.length){con.insertAdjacentHTML("beforeend",line(steps[i][0],steps[i][1]));con.insertAdjacentHTML("beforeend",`<div class="loadingbar"><i style="width:${Math.round((i+1)/steps.length*100)}%"></i></div>`);con.scrollTop=con.scrollHeight;i++;setTimeout(tick,260+Math.random()*280)}else{busy=false;$("#portraitCaption").textContent="ARCHIVE RESTAURÉE";$("#quote").textContent=c.quote;renderTab(currentTab)}};
+ tick();
+}
+function selectCharacter(id){const c=characters.find(x=>x.id===id);if(!c)return;selected=c;drawList();renderLoading(c);renderQuick();}
+function renderQuick(){const c=selected;$("#quickInfo").innerHTML=`<div class="data-grid"><div class="key">Âge</div><div class="value">${esc(c.age)}</div><div class="key">Taille</div><div class="value">${esc(c.height)}</div><div class="key">Origine</div><div class="value">${esc(c.origin)}</div><div class="key">Rôle</div><div class="value">${esc(c.job)}</div><div class="key">État</div><div class="value">${esc(c.state)}</div></div>`;}
+function renderTab(tab){
+ currentTab=tab;document.querySelectorAll(".tab").forEach(b=>b.classList.toggle("active",b.dataset.tab===tab));
+ const c=selected, con=$("#console");let html="";
+ if(tab==="logs"){
+ html+=line("› Loading Data Of "+esc(c.name)+"...");html+=line("▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰ 100%","ok");html+=line("› Data Aquired. Initiating Session...");html+=line("› Connnecting to Server 158.25.48.2 : <span class='ok'>OK</span>");html+=line("› Verification of the data : <span class='ok'>OK</span>");html+=line("› Décompiling data : <span class='ok'>OK</span>");html+=line("› Showing Info...");html+=line("────────────────────────────────────────────────────────","rule");html+=line(`› <span class="ok">[FICHE OC] ${esc(c.name.toUpperCase())}</span>`);html+=dataGrid([["Name",c.name],["Alias",c.alias],["Age",c.age],["Species",c.species],["Job",c.job],["Universes",c.universe],["State",c.state]]);html+=line("────────────────────────────────────────────────────────","rule");html+=line(`› Loading Folder : <span class="ok">BIO...</span>`);html+=line("› [BIO]","section-title");html+=`<div class="bio-copy">${esc(c.bio)}</div>`;html+=line("› Loading Folder : <span class='ok'>SKILLS...</span>");html+=c.skills.map(s=>line("　- "+esc(s))).join("");html+=line(" ");html+=line("› Tapez <span class='ok'>help</span> pour afficher les commandes disponibles.","muted");
+ } else if(tab==="bio"){
+ html+=line(`› BIO FOLDER // ${esc(c.name)}`,"section-title");html+=dataGrid([["ID",c.id],["Full Name",c.name],["Alias",c.alias],["Species",c.species],["Age",c.age],["Height",c.height],["Origin",c.origin],["Job",c.job],["Universes",c.universe],["State",c.state]]);html+=line("[BIO]","section-title");html+=`<div class="bio-copy">${esc(c.bio)}</div>`;html+=line("[IDENTIFIED SKILLS]","section-title");html+=c.skills.map(s=>`<span class="tag">${esc(s)}</span>`).join("");
+ }else if(tab==="dossiers"){
+ html+=line(`› FOLDER AND MISSIONS NOTES // ${esc(c.name)}`,"section-title");html+=line("Data partially restored, some part is still damaged.","muted");html+=c.files.map((f,i)=>line(`› <button class="file-button" data-file="${i}">${esc(f)}</button> <span class="${i===1?"warn":"ok"}">[${i===1?"PARTIEL":"RÉCUPÉRÉ"}]</span>`)).join("");html+=line("[IA NOTE]","section-title");html+=`<div class="bio-copy">${esc(c.notes)}</div>`;html+=line("› Select a document to inspect it");
+ }else if(tab==="medias"){
+ html+=line(`› GALERY // ${esc(c.name)}`,"section-title");html+=line("Not all of the original data is here","warn");html+=c.media.map((m,i)=>`<div class="quickbox"><h3>FRAGMENT ${String(i+1).padStart(2,"0")}</h3><div class="inside">${esc(m)}<div class="subtle small">Empreinte : ${c.id}-${(i+1).toString(16).toUpperCase()}-ARCH</div><button data-media="${i}">› Inspecter le fragment</button></div></div>`).join("");html+=line("Note : remplacez ces entrées par vos propres images dans le fichier HTML. (SACRE KEBEKOIS)");
+ }else{
+ html+=line(`› CALLS // ${esc(c.name)}`,"section-title");html+=line("Last known calls : ");html+=c.links.map((l,i)=>line(`› ${esc(l)} <span class="muted">[REF ${c.id}-${i+1}]</span>`)).join("");html+=line(" ");html+=line("› Sacré Kébékois","warn");html+=line("Astuce : modifiez le tableau links du personnage dans index.html pour ajouter vos propres liens.");
+ }
+ con.innerHTML=html;con.scrollTop=0;
+ con.querySelectorAll("[data-file]").forEach(b=>b.addEventListener("click",()=>inspectFile(Number(b.dataset.file))));
+ con.querySelectorAll("[data-media]").forEach(b=>b.addEventListener("click",()=>{const m=selected.media[Number(b.dataset.media)];toast("Inspect Data : "+m);}));
+}
+function dataGrid(rows){return `<div class="data-grid">${rows.map(([k,v])=>`<div class="key">${esc(k)}</div><div class="value">${esc(v)}</div>`).join("")}</div>`;}
+function inspectFile(i){const c=selected;const content=[c.notes,"FRAGMENT DATA PARTIALLY RESTORED : The data is available, but some of it didn't survived the shutdown","SHA-256 : INCONNU — SOURCE : ARCHIVE-Ø7"][i]||"Document is unavailable.";toast("Document Opened : "+c.files[i]);const con=$("#console");con.insertAdjacentHTML("beforeend",`<div class="quickbox"><h3>${esc(c.files[i])}</h3><div class="inside">${esc(content)}</div></div>`);}
+function toast(msg){const old=$(".toast");if(old)old.remove();const t=document.createElement("div");t.className="toast";t.textContent=msg;document.body.appendChild(t);setTimeout(()=>t.remove(),2800);}
+function runCommand(raw){const input=raw.trim();if(!input)return;const con=$("#console");con.insertAdjacentHTML("beforeend",line("&gt; "+esc(input),"prompt"));const parts=input.split(/\s+/),cmd=parts[0].toLowerCase(),arg=parts.slice(1).join(" ").toLowerCase();let result="";
+ if(cmd==="help"||cmd==="aide")result="Commands : help · list · open [name] · bio · folder · media · calls · clear · state · Net-user";
+ else if(cmd==="list"||cmd==="ls")result=characters.map(c=>`${c.name} [${c.id}] — ${c.status}`).join("\n");
+ else if(cmd==="open"||cmd==="select"){const c=characters.find(x=>x.name.toLowerCase()===arg||x.id.toLowerCase()===arg);if(c){selectCharacter(c.id);result="Opening File "+c.name+"..."}else result="Failed. Write list to see them";}
+ else if(["bio","folders","media","calls","logs"].includes(cmd)){renderTab(cmd);result="Section active : "+cmd;}
+ else if(cmd==="clear"){con.innerHTML="";return;}
+ else if(cmd==="state")result="158.25.48.2 : ONLINE\nServer Integrity : 61.8%\nData Collected : partiels\nAccess : Reading Only";
+ else if(cmd==="net-user")result="USER 9850\nLEVEL : READING ONLY\nID : UNKNOWN";
+ else result="Unknown Input : "+cmd+". Type Help to see the commands.";
+ con.insertAdjacentHTML("beforeend",line(esc(result).replace(/\n/g,"<br>"),result.startsWith("Unknown Input")?"error":""));con.scrollTop=con.scrollHeight;$("#commandInput").value="";
+}
+$("#commandForm").addEventListener("submit",e=>{e.preventDefault();if(busy){toast("Please wait while we collect the data");return;}runCommand($("#commandInput").value);});
+document.querySelectorAll(".tab").forEach(b=>b.addEventListener("click",()=>renderTab(b.dataset.tab)));
+document.querySelectorAll("[data-tab]").forEach(b=>{if(!b.classList.contains("tab"))b.addEventListener("click",()=>renderTab(b.dataset.tab));});
+drawList();renderQuick();renderLoading(selected);
+</script>
+</body>
+</html>
